@@ -4,6 +4,7 @@
 #include <string>
 
 namespace cslibs_plugins {
+template<typename ChildClass>
 class Plugin {
  public:
   virtual inline ~Plugin() = default;
@@ -14,12 +15,15 @@ class Plugin {
 
   inline std::size_t getId() const { return id_; }
 
-  inline void setId(const std::size_t id) { id_ = id; }
-
  protected:
-  inline Plugin() = default;
+  inline Plugin() : id_{generateId()} {}
 
-  std::size_t id_;
+  inline static std::size_t generateId() {
+    static std::size_t id{0};
+    return id++;
+  }
+
+  const std::size_t id_;
   std::string name_;
 };
 }  // namespace cslibs_plugins
