@@ -3,7 +3,7 @@
 
 #include <ros/node_handle.h>
 
-#include <cslibs_plugins/terminal_color.hpp>
+#include <cslibs_plugins/common/terminal_color.hpp>
 #include <map>
 #include <regex>
 #include <set>
