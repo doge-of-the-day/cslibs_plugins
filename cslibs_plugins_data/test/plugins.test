@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <launch>
-  <group ns="test_load_plugins">
+  <group ns="test_load_plugins_data">
     <group ns="laser">
       <param name="class" value="cslibs_plugins_data::LaserProvider" />
       <param name="base_class" value="cslibs_plugins_data::DataProvider" />
@@ -53,5 +53,5 @@
       <param name="base_class" value="cslibs_plugins_data::DataProvider" />
     </group>
   </group>
-  <test test-name="test_load_plugins" pkg="cslibs_plugins_data" type="test_load_plugins" name="test_load_plugins" />
+  <test test-name="test_load_plugins_data" pkg="cslibs_plugins_data" type="test_load_plugins_data" name="test_load_plugins_data" />
 </launch>

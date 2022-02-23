@@ -3,8 +3,8 @@
 
 #include <ros/node_handle.h>
 
-#include <cslibs_plugins/plugin_factory.hpp>
-#include <cslibs_plugins/terminal_color.hpp>
+#include <cslibs_plugins/common/plugin_factory.hpp>
+#include <cslibs_plugins/common/terminal_color.hpp>
 #include <map>
 #if __GNUC__ > 5
 #include <regex>

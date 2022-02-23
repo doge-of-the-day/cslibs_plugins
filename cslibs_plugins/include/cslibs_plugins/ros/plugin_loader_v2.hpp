@@ -41,7 +41,6 @@ class PluginLoaderV2 {
       if (constructor) {
         auto p = constructor();
         p->setName(name);
-        p->setId(++id);
         p->setup(arguments...);
         plugins[name] = p;
       } else {

@@ -4,7 +4,7 @@
 #include <ros/node_handle.h>
 
 #include <cslibs_math_ros/tf/tf_provider.hpp>
-#include <cslibs_plugins/plugin.hpp>
+#include <cslibs_plugins/common/plugin.hpp>
 #include <cslibs_plugins_data/data.hpp>
 #include <cslibs_utility/common/delegate.hpp>
 #include <cslibs_utility/signals/signals.hpp>
@@ -12,7 +12,7 @@
 #include <memory>
 
 namespace cslibs_plugins_data {
-class DataProvider : public cslibs_plugins::Plugin {
+class DataProvider : public cslibs_plugins::Plugin<DataProvider> {
  public:
   using Ptr = std::shared_ptr<DataProvider>;
 

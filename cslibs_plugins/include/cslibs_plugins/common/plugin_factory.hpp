@@ -1,7 +1,7 @@
 #ifndef CSLIBS_PLUGINS_PLUGIN_FACTORY_HPP
 #define CSLIBS_PLUGINS_PLUGIN_FACTORY_HPP
 
-#include <cslibs_plugins/plugin_manager.hpp>
+#include <cslibs_plugins/plugin_manager/plugin_manager.hpp>
 #include <string>
 
 namespace cslibs_plugins {
@@ -19,7 +19,6 @@ class PluginFactory {
     if (auto constructor = plugin_manager.getConstructor(class_name)) {
       typename plugin_t::Ptr plugin = constructor();
       plugin->setName(plugin_name);
-      plugin->setId(++plugin_id_);
       plugin->setup(arguments...);
       return plugin;
     }

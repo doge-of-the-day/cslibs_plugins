@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <ros/ros.h>
 
-#include <cslibs_plugins/launch_file_parser.hpp>
+#include <cslibs_plugins/ros/launch_file_parser.hpp>
 
 struct UpdateModel2D {
   static std::string Type() { return "muse_mcl_2d::UpdateModel2D"; }
